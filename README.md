@@ -1,4 +1,4 @@
-# Antique theme for Obsidian.md
+# Vintage theme for Obsidian.md
 
 - Readability using larger font sizes by default
 - Mixes Serif and Sans-Serif type faces
