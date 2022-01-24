@@ -13,6 +13,7 @@ File Organization
     4.6 Typography: Blockquotes
 5. Tables
 6. Frontmatter
+7. Dataview Plugin
 8. Miscellaneous
 
 */
@@ -161,7 +162,8 @@ strong {
 
 /* ----------------- 4. Typography ----------------- */
 
-.markdown-preview-view {
+.markdown-preview-view,
+.dataview {
     font-family: var(--font-serif);
     font-size: var(--default-font-size);
     line-height: var(--default-line-height);
@@ -188,6 +190,7 @@ strong {
 }
 
 .markdown-preview-section h1,
+.block-language-dataview h1,
 .HyperMD-header-1,
 .cm-header-1 {
     font-family: var(--font-sans-serif) !important;
@@ -199,6 +202,7 @@ strong {
 }
 
 .markdown-preview-section h2,
+.block-language-dataview h2,
 .HyperMD-header-2,
 .cm-header-2 {
     font-family: var(--font-sans-serif) !important;
@@ -210,6 +214,7 @@ strong {
 }
 
 .markdown-preview-section h3,
+.block-language-dataview h3,
 .HyperMD-header-3,
 .cm-header-3 {
     font-family: var(--font-sans-serif) !important;
@@ -221,6 +226,7 @@ strong {
 }
 
 .markdown-preview-section h4,
+.block-language-dataview h4,
 .HyperMD-header-4,
 .cm-header-4 {
     font-family: var(--font-serif) !important;
@@ -231,6 +237,7 @@ strong {
 }
 
 .markdown-preview-section h5,
+.block-language-dataview h5,
 .HyperMD-header-5,
 .cm-header-5 {
     font-family: var(--font-serif) !important;
@@ -240,6 +247,7 @@ strong {
 }
 
 .markdown-preview-section h6,
+.block-language-dataview h6,
 .HyperMD-header-6,
 .cm-header-6 {
     font-family: var(--font-serif) !important;
@@ -253,6 +261,8 @@ strong {
 .markdown-preview-section a,
 .markdown-preview-section a:visited,
 .cm-hmd-internal-link,
+.dataview a,
+.block-language-dataview a,
 .cm-link {
     color: var(--text-a) !important;
     cursor: pointer;
@@ -266,14 +276,17 @@ strong {
     opacity: 0.7;
 }
 
-.markdown-preview-section a:hover {
+.markdown-preview-section a:hover,
+.dataview a:hover,
+.block-language-dataview a:hover {
     outline: 0 none;
     color: var(--text-a-hover) !important;
     text-decoration: underline;
     transition: all 0.7s ease-in-out;
 }
 
-.markdown-preview-section a:active {
+.markdown-preview-section a:active,
+.dataview a:active {
     color: var(--text-primary) !important;
 }
 
@@ -408,13 +421,10 @@ strong {
 
 /* 4.5 Lists */
 
-
+/* unordered list2 */
 .markdown-preview-view ul {
     margin-left: 1em;
     list-style: none;
-}
-.markdown-preview-view ol {
-    margin-left: 1em;
 }
 
 .markdown-preview-view ul li > ol,
@@ -430,14 +440,33 @@ strong {
         width: 1em;
         margin-left: -1em;
 }
-
-.markdown-preview-view ol li:before {
-    content: counters(item, ".") ". ";
-    counter-increment: item;
-    padding-right: 5px;
+.cm-formatting-list-ul .list-bullet {
+    font-weight: 900;
+    font-size: var(--h4-size);
 }
 
-/* Tasks in Lists */
+/* ordered lists */
+ol {
+    counter-reset: section;
+    list-style-type: none;
+}
+
+ol li:before {
+    counter-increment: section;
+    content: counters(section, ".") ") ";
+    font-weight: 700;
+    padding-right: 0.2em;
+    /* font-family: var(--font-sans-serif); */
+}
+
+.cm-formatting-list-ol.cm-list-1,
+.cm-formatting-list-ol.cm-list-2,
+.cm-formatting-list-ol.cm-list-3 {
+    font-weight: 700;
+}
+
+
+/* Task lists */
 .markdown-preview-view ul.contains-task-list li:before {
     list-style: none !important;
     content: none !important;
@@ -566,7 +595,20 @@ strong {
     color: var(--text-faint) !important;
 }
 
+/* ----------------- 8. Dataview Plugin ----------------- */
+.dataview.list-view-ul {
+    font-family: var(--font-serif);
+    font-size: var(--default-font-size);
+    line-height: var(--default-line-height);
+}
+
+/* Other dataview styles are mixed in with links and headings.  Search for these classes:
+    - .dataview a:hover,
+    - .block-language-dataview
+/*
+
 /* ----------------- 8. Miscellaneous ----------------- */
+/* Horizontal rule */
 .markdown-preview-view hr {
     padding: 0;
     border: none;
@@ -574,4 +616,20 @@ strong {
     color: var(--text-normal);
     text-align: center;
     margin: 2em 0 2em 0;
+}
+
+img {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border: 1px solid var(--text-muted);
+}
+
+/* Highlight Active Line */
+.cm-active,
+.cm-active .cm-hmd-frontmatter {
+    background-color: var(--text-normal) !important;
+    color: var(--background-primary) !important;
 }
