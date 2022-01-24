@@ -147,14 +147,6 @@ strong {
     opacity: 70% !important;
 }
 
-.markdown-preview-view::selection,
-.markdown-preview-view::-moz-selection,
-.markdown-source-view::selection,
-.markdown-source-view::-moz-selection {
-    background-color: var(--text-selection) !important;
-    color: var(--background-primary) !important;
-}
-
 .markdown-preview-view,
 .markdown-source-view {
     background: var(--background-primary);
@@ -425,13 +417,15 @@ strong {
 .markdown-preview-view ul {
     margin-left: 1em;
     list-style: none;
+        /* text-indent: -30px;
+        margin-left: 30px; */
 }
 
 .markdown-preview-view ul li > ol,
 .markdown-preview-view ul li > ul,
 .markdown-preview-view ol li > ol,
 .markdown-preview-view ol li > ul {
-    margin-left: 0em;
+    margin-left: 1em;
 }
 
 .markdown-preview-view ul li:before {
@@ -449,6 +443,8 @@ strong {
 ol {
     counter-reset: section;
     list-style-type: none;
+        text-indent: -24px;
+        margin-left: 24px;
 }
 
 ol li:before {
@@ -627,9 +623,11 @@ img {
     border: 1px solid var(--text-muted);
 }
 
-/* Highlight Active Line */
-.cm-active,
-.cm-active .cm-hmd-frontmatter {
-    background-color: var(--text-normal) !important;
+/* Text Highlighting */
+.markdown-preview-view::selection,
+.markdown-preview-view::-moz-selection,
+.markdown-source-view::selection,
+.markdown-source-view::-moz-selection {
+    background-color: var(--text-selection) !important;
     color: var(--background-primary) !important;
 }
