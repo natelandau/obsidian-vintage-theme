@@ -1,4 +1,6 @@
 /*
+VINTAGE THEME FOR OBSIDIAN.MD
+
 File Organization
 
 1. Variables
@@ -43,23 +45,23 @@ File Organization
     --light3: #fefcfa;
     --red: #c63d0f;
     --red1: #cb5026;
-    --red2: #d1633e ;
+    --red2: #d1633e;
     --yellow: #ebc06c;
 
-    --default-font-size: 22px;
-    --default-line-height: 36px;
+    --default-font-size: 20px;
+    --default-line-height: 30px;
     --small-font-size: 16px;
     --small-line-height: 24px;
     --editor-font-size-override: 18px !important;
     --editor-line-height: 29px;
     --monospace-font-size: 18px;
     --monospace-line-height: 26px;
-    --h1-size: 2em;
-    --h2-size: 1.75em;
-    --h3-size: 1.4em;
-    --h4-size: 1.2em;
-    --h5-size: 1.1em;
-    --h6-size: 1em;
+    --h1-size: 50px;
+    --h2-size: 40px;
+    --h3-size: 35px;
+    --h4-size: 32px;
+    --h5-size: 28px;
+    --h6-size: 24px;
 }
 
 /* ----------------- 2. Base Styles ----------------- */
@@ -163,7 +165,7 @@ strong {
 }
 
 .markdown-preview-section p {
-        margin: 0 0 1em 0 !important;;
+    margin: 0 0 1em 0 !important;
 }
 
 .cm-line {
@@ -172,7 +174,6 @@ strong {
     font-size: var(--default-font-size);
     line-height: var(--default-line-height);
     font-weight: 400;
-    --text-selection: var(--color-selection);
 }
 
 /* 4.1 Headings */
@@ -205,6 +206,12 @@ strong {
     padding-bottom: 5px;
 }
 
+.markdown-preview-section h2,
+.block-language-dataview h2 {
+    width: 100%;
+    border-bottom: 3px double var(--text-normal);
+}
+
 .markdown-preview-section h3,
 .block-language-dataview h3,
 .HyperMD-header-3,
@@ -221,20 +228,20 @@ strong {
 .block-language-dataview h4,
 .HyperMD-header-4,
 .cm-header-4 {
-    font-family: var(--font-serif) !important;
+    font-family: var(--font-sans-serif) !important;
     font-size: var(--h4-size);
-    font-weight: 900 !important;
+    font-weight: 500 !important;
     margin: 0.8em 0 0.2em 0;
-        text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .markdown-preview-section h5,
 .block-language-dataview h5,
 .HyperMD-header-5,
 .cm-header-5 {
-    font-family: var(--font-serif) !important;
+    font-family: var(--font-sans-serif) !important;
     font-size: var(--h5-size);
-    font-weight: 900 !important;
+    font-weight: 500 !important;
     margin: 0.8em 0 0.2em 0;
 }
 
@@ -279,7 +286,7 @@ strong {
 
 .markdown-preview-section a:active,
 .dataview a:active {
-    color: var(--text-primary) !important;
+    color: var(--text-normal) !important;
 }
 
 /* Edit mode - URL expansion */
@@ -334,18 +341,6 @@ strong {
 
 /* 4.4 Code */
 
-.cm-inline-code {
-    background: var(--text-normal) !important;
-    color: var(--background-primary) !important;
-    padding: 0.3em 1em 0.3em 0 !important;
-    font-family: var(--font-monospace) !important;
-    font-size: var(--monospace-font-size) !important;
-    line-height: var(--monospace-line-height) !important;
-    text-rendering: optimizeSpeed;
-    white-space: nowrap;
-    font-weight: 400;
-}
-
 .cm-formatting-code {
     padding: none !important;
 }
@@ -375,7 +370,21 @@ strong {
 }
 
 /* inline code */
-.markdown-preview-view p code {
+.cm-inline-code {
+    background: var(--text-normal) !important;
+    color: var(--background-primary) !important;
+    padding: 0.3em 1em 0.3em 0 !important;
+    font-family: var(--font-monospace) !important;
+    font-size: var(--monospace-font-size) !important;
+    line-height: var(--monospace-line-height) !important;
+    text-rendering: optimizeSpeed;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.markdown-preview-view p code,
+.markdown-preview-view ol li code,
+.markdown-preview-view ul li code {
     font-family: var(--font-monospace) !important;
     font-size: var(--monospace-font-size);
     color: var(--background-primary) !important;
@@ -397,7 +406,7 @@ strong {
     font-family: var(--font-monospace) !important;
     font-size: var(--monospace-font-size) !important;
     line-height: var(--monospace-line-height) !important;
-    color: var(--text-primary) !important;
+    color: var(--text-normal) !important;
     padding: 0.5em;
     text-shadow: none !important;
 }
@@ -417,23 +426,24 @@ strong {
 .markdown-preview-view ul {
     margin-left: 1em;
     list-style: none;
-        /* text-indent: -30px;
+    /* text-indent: -30px;
         margin-left: 30px; */
 }
 
-.markdown-preview-view ul li > ol,
-.markdown-preview-view ul li > ul,
-.markdown-preview-view ol li > ol,
-.markdown-preview-view ol li > ul {
+.markdown-preview-view ul li>ol,
+.markdown-preview-view ul li>ul,
+.markdown-preview-view ol li>ol,
+.markdown-preview-view ol li>ul {
     margin-left: 1em;
 }
 
 .markdown-preview-view ul li:before {
-        content: "●";
-        display: inline-block;
-        width: 1em;
-        margin-left: -1em;
+    content: "●";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
+
 .cm-formatting-list-ul .list-bullet {
     font-weight: 900;
     font-size: var(--h4-size);
@@ -443,8 +453,8 @@ strong {
 ol {
     counter-reset: section;
     list-style-type: none;
-        text-indent: -24px;
-        margin-left: 24px;
+    text-indent: -24px;
+    margin-left: 24px;
 }
 
 ol li:before {
@@ -467,6 +477,7 @@ ol li:before {
     list-style: none !important;
     content: none !important;
 }
+
 .markdown-preview-view .task-list-item-checkbox {
     filter: grayscale(100%);
 }
@@ -478,10 +489,25 @@ ol li:before {
 
 /* 4.6 Blockquotes */
 .markdown-preview-view blockquote {
+    font-size: var(--h3-size);
+    line-height: 1.2em;
+    font-family: var(--font-serif);
+    font-weight: 200;
+    border: none !important;
+    font-style: italic;
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+}
+
+.markdown-preview-view blockquote p {
+    margin: 0 !important;
+}
+
+/*
+.markdown-preview-view blockquote {
     border: 2px dashed var(--background-primary) !important;
     border-left: none;
     border-right: none;
-    /* border: none !important; */
     background-color: var(--text-normal);
     color: var(--background-primary);
     font-size: var(--h1-size);
@@ -493,8 +519,7 @@ ol li:before {
     margin: 1em 0 1em 0;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
-}
+} */
 
 .markdown-preview-view blockquote:first-letter {
     font-family: var(--font-sans-serif);
@@ -546,7 +571,7 @@ ol li:before {
     text-transform: uppercase;
     vertical-align: middle;
     font-family: var(--font-sans-serif);
-    font-weight:700;
+    font-weight: 700;
     font-size: 1.17em;
 }
 
@@ -561,7 +586,7 @@ ol li:before {
     display: none;
 }
 
-.markdown-preview-view .frontmatter-container{
+.markdown-preview-view .frontmatter-container {
     margin-bottom: 40px;
     font-family: var(--font-monospace);
     color: var(--background-primary);
@@ -625,9 +650,7 @@ img {
 
 /* Text Highlighting */
 .markdown-preview-view::selection,
-.markdown-preview-view::-moz-selection,
-.markdown-source-view::selection,
-.markdown-source-view::-moz-selection {
+.markdown-source-view::selection {
     background-color: var(--text-selection) !important;
     color: var(--background-primary) !important;
 }
