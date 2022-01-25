@@ -649,8 +649,14 @@ img {
     border: 1px solid var(--text-muted);
 }
 
-/* Text Highlighting */
+/* Text Selection Highlighting */
 ::selection {
     background-color: var(--text-selection) !important;
     color: var(--text-normal) !important;
+}
+
+/* Active edit line selection */
+.cm-active {
+    background-color: var(--text-normal);
+    color: var(--background-primary);
 }
