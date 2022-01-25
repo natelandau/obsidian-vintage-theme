@@ -47,7 +47,7 @@ File Organization
     --red1: #cb5026;
     --red2: #d1633e;
     --yellow: #ebc06c;
-    --yellow2: #f0d07e;
+    --yellow2: #b49c5f;
 
     --default-font-size: 20px;
     --default-line-height: 30px;
@@ -94,7 +94,7 @@ File Organization
     --interactive-accent-rgb: var(--yellow);
     --inline-code: var(--light0);
     --vim-cursor: var(--yellow);
-    --text-selection: var(--yellow);
+    --text-selection: var(--yellow2);
     --code-block: var(--light0);
     --pre-code: var(--dark1);
 }
