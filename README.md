@@ -20,17 +20,15 @@ A mixture of serif and sans-serif fonts with a focus on readability and a vintag
 
 ![Dark Mode](_media/dark.png)
 
-### Blockquotes
-
-![blockquote](_media/blockqupte_dark.png)
-
-### Tables
-
-![Tables](_media/tables_light.png)
+| Feature     | Light                                      | Dark                                      |
+| ----------- | ------------------------------------------ | ----------------------------------------- |
+| Blockquotes | ![blockquote](_media/blockquote_light.png) | ![blockquote](_media/blockquote_dark.png) |
+| Tables      | ![Tables](_media/table_light.png)          | ![Tables](_media/table_dark.png)          |
+| Lists       | ![Lists](_media/lists_light.png)           | ![Lists](_media/lists_dark.png)           |
+| Code        | ![Code](_media/code_light.png)             | ![Code](_media/code_dark.png)             |
+| Edit Mode   | ![Edit Mode](_media/editmode_light.png)    | ![Edit Mode](_media/editmode_dark.png)    |
 
 ## Fancy List Numbering
-
-![Lists](_media/lists_dark.png)
 
 ## How to Install
 
