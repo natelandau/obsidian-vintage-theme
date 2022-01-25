@@ -39,6 +39,8 @@ File Organization
     --dark2: #5b5b5b;
     --dark3: #707070;
     --gray: #999999;
+    --gray-light: #ECEFF4;
+    --gray-dark: #4C566A;
     --light0: #fdf3e7;
     --light1: #e3dacf;
     --light2: #fdf7f0;
@@ -48,6 +50,8 @@ File Organization
     --red2: #d1633e;
     --yellow: #ebc06c;
     --yellow2: #b49c5f;
+    --blue: #5E81AC;
+    --blue2: #88C0D0;
 
     --default-font-size: 20px;
     --default-line-height: 30px;
@@ -97,6 +101,7 @@ File Organization
     --text-selection: var(--yellow2);
     --code-block: var(--light0);
     --pre-code: var(--dark1);
+    --acrtive-line: var(--gray-dark);
 }
 
 .theme-light .markdown-source-view,
@@ -129,6 +134,7 @@ File Organization
     --text-selection: var(--yellow);
     --code-block: var(--dark0);
     --pre-code: var(--light3);
+    --acrtive-line: var(--gray-light);
 }
 
 /* ----------------- 3. Page and Application ----------------- */
@@ -188,6 +194,7 @@ strong {
 .HyperMD-header-1,
 .cm-header-1 {
     font-family: var(--font-sans-serif) !important;
+    line-height: var(--default-line-height) !important;
     font-size: var(--h1-size);
     text-transform: uppercase;
     font-weight: 700 !important;
@@ -201,6 +208,7 @@ strong {
 .cm-header-2 {
     font-family: var(--font-sans-serif) !important;
     font-size: var(--h2-size);
+    line-height: var(--default-line-height) !important;
     text-transform: uppercase;
     font-weight: 700 !important;
     margin: 0.8em 0 0.2em 0 !important;
@@ -217,6 +225,7 @@ strong {
 .block-language-dataview h3,
 .HyperMD-header-3,
 .cm-header-3 {
+    line-height: var(--default-line-height) !important;
     font-family: var(--font-sans-serif) !important;
     font-size: var(--h3-size);
     text-transform: uppercase;
@@ -447,7 +456,7 @@ strong {
 
 .cm-formatting-list-ul .list-bullet {
     font-weight: 900;
-    font-size: var(--h4-size);
+    font-size: 22px;
 }
 
 /* ordered lists */
@@ -657,6 +666,6 @@ img {
 
 /* Active edit line selection */
 .cm-active {
-    background-color: var(--text-normal);
-    color: var(--background-primary);
+    background-color: var(--acrtive-line);
+    /* color: var(--background-primary); */
 }
