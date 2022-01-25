@@ -425,12 +425,17 @@ strong {
 
 /* 4.5 Lists */
 
-/* unordered list2 */
+/* unordered lists */
 .markdown-preview-view ul {
     margin-left: 1em;
     list-style: none;
     /* text-indent: -30px;
         margin-left: 30px; */
+}
+
+.markdown-preview-view ul li,
+.markdown-preview-view ol li {
+    margin-top: 0.4em;
 }
 
 .markdown-preview-view ul li>ol,
