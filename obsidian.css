@@ -190,7 +190,6 @@ strong {
 }
 
 .markdown-preview-section h1,
-.block-language-dataview h1,
 .HyperMD-header-1,
 .cm-header-1 {
     font-family: var(--font-sans-serif) !important;
@@ -203,7 +202,6 @@ strong {
 }
 
 .markdown-preview-section h2,
-.block-language-dataview h2,
 .HyperMD-header-2,
 .cm-header-2 {
     font-family: var(--font-sans-serif) !important;
@@ -215,14 +213,12 @@ strong {
     padding-bottom: 5px;
 }
 
-.markdown-preview-section h2,
-.block-language-dataview h2 {
+.markdown-preview-section h2 {
     width: 100%;
     border-bottom: 3px double var(--text-normal);
 }
 
 .markdown-preview-section h3,
-.block-language-dataview h3,
 .HyperMD-header-3,
 .cm-header-3 {
     line-height: var(--default-line-height) !important;
@@ -235,7 +231,6 @@ strong {
 }
 
 .markdown-preview-section h4,
-.block-language-dataview h4,
 .HyperMD-header-4,
 .cm-header-4 {
     font-family: var(--font-sans-serif) !important;
@@ -246,7 +241,6 @@ strong {
 }
 
 .markdown-preview-section h5,
-.block-language-dataview h5,
 .HyperMD-header-5,
 .cm-header-5 {
     font-family: var(--font-sans-serif) !important;
@@ -256,7 +250,6 @@ strong {
 }
 
 .markdown-preview-section h6,
-.block-language-dataview h6,
 .HyperMD-header-6,
 .cm-header-6 {
     font-family: var(--font-serif) !important;
@@ -632,6 +625,18 @@ ol li:before {
     font-size: var(--default-font-size);
     line-height: var(--default-line-height);
 }
+
+.block-language-dataview .dataview.result-group ol,
+.block-language-dataview .dataview.result-group ul {
+    margin-top: 0;
+}
+
+.block-language-dataview h4 {
+    font-size: var(--default-font-size);
+    line-height: var(--default-line-height);
+    margin: 0;
+}
+
 
 /* Other dataview styles are mixed in with links and headings.  Search for these classes:
     - .dataview a:hover,
