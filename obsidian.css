@@ -16,7 +16,8 @@ File Organization
 5. Tables
 6. Frontmatter
 7. Dataview Plugin
-8. Miscellaneous
+8. Application Chrome
+9. Miscellaneous
 
 */
 
@@ -71,6 +72,32 @@ File Organization
 
 /* ----------------- 2. Base Styles ----------------- */
 
+/* Application chrome styles - light/dark */
+.theme-dark {
+    --background-primary: var(--dark0);
+    --background-primary-alt: var(--dark1);
+    --background-secondary: var(--dark2);
+    --background-secondary-alt: var(--dark3);
+    --text-normal: var(--light1);
+    --text-faint: var(--gray-light);
+    --text-muted: var(--gray-light);
+    --interactive-accent: var(--light1);
+    --text-on-accent: var(--dark0);
+}
+
+.theme-light {
+    --background-primary: var(--light0);
+    --background-primary-alt: var(--light1);
+    --background-secondary: var(--light2);
+    --background-secondary-alt: var(--light3);
+    --text-normal: var(--dark0);
+    --text-faint: var(--gray-dark);
+    --text-muted: var(--gray-dark);
+    --interactive-accent: var(--dark0);
+    --text-on-accent: var(--light0);
+}
+
+/* Main content views - light/dark */
 .theme-dark .markdown-source-view,
 .theme-dark .markdown-preview-view {
     --background-primary: var(--dark0);
@@ -137,7 +164,7 @@ File Organization
     --acrtive-line: var(--gray-light);
 }
 
-/* ----------------- 3. Page and Application ----------------- */
+/* ----------------- 3. Page Container ----------------- */
 html {
     font-size: 100% !important;
 }
@@ -648,7 +675,58 @@ ol li:before {
     - .block-language-dataview
 /*
 
-/* ----------------- 8. Miscellaneous ----------------- */
+/* ----------------- 9. Application Chrome ----------------- */
+
+.workspace-ribbon,
+.workspace-tab-header-container,
+.workspace-tab-header-inner,
+.workspace-tab-headerr,
+.workspace-tab-container-inner {
+    background-color: var(--text-normal);
+    color: var(--background-primary);
+}
+
+.is-active .workspace-tab-header-container,
+.is-active .workspace-tab-header-inner {
+    background-color: var(--background-secondary);
+    color: var(--text-normal);
+}
+
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action,
+.workspace-tab-header-inner-icon {
+    color: var(--background-primary);
+}
+
+.workspace-tab-header-inner-icon:hover {
+    color: var(--background-secondary-alt);
+}
+
+.is-active .workspace-tab-header-inner-icon {
+    color: var(--text-normal) !important;
+}
+
+.tree-item-self.is-clickable:hover {
+    background-color: var(--background-primary-alt);
+}
+
+.workspace-leaf-resize-handle {
+    border-right: 3px double var(--text-normal);
+}
+
+.workspace-split.mod-left-split>.workspace-leaf-resize-handle,
+.workspace-split.mod-right-split>.workspace-leaf-resize-handle {
+    height: 100%;
+}
+
+.view-header-title {
+    font-family: var(--font-sans-serif);
+    font-weight: 300;
+    font-size: var(--h6-size);
+}
+
+
+/* ----------------- 9. Miscellaneous ----------------- */
 /* Horizontal rule */
 .markdown-preview-view hr {
     padding: 0;
