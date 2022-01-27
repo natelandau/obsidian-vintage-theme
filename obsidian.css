@@ -17,7 +17,8 @@ File Organization
 6. Frontmatter
 7. Dataview Plugin
 8. Application Chrome
-9. Miscellaneous
+9. Media Queries
+10. Miscellaneous
 
 */
 
@@ -211,21 +212,25 @@ strong {
 }
 
 /* 4.1 Headings */
-
 .HyperMD-header {
     margin-top: 1em !important;
+    line-height: 95%;
+    padding-bottom: 0;
 }
 
 .markdown-preview-section h1,
 .HyperMD-header-1,
 .cm-header-1 {
     font-family: var(--font-sans-serif) !important;
-    line-height: var(--default-line-height) !important;
     font-size: var(--h1-size);
+    line-height: 95%;
     text-transform: uppercase;
     font-weight: 700 !important;
-    margin: 0.8em 0 0.2em 0 !important;
+    margin: 0.8em 0 0.2em 0;
     padding-bottom: 5px;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-thickness: 1px;
 }
 
 .markdown-preview-section h2,
@@ -233,26 +238,26 @@ strong {
 .cm-header-2 {
     font-family: var(--font-sans-serif) !important;
     font-size: var(--h2-size);
-    line-height: var(--default-line-height) !important;
+    line-height: 95%;
     text-transform: uppercase;
-    font-weight: 700 !important;
+    font-weight: 300 !important;
     margin: 0.8em 0 0.2em 0 !important;
     padding-bottom: 5px;
 }
 
-.markdown-preview-section h2 {
-    width: 100%;
+.markdown-preview-section h2,
+.HyperMD-header-2 {
     border-bottom: 3px double var(--text-normal);
 }
 
 .markdown-preview-section h3,
 .HyperMD-header-3,
 .cm-header-3 {
-    line-height: var(--default-line-height) !important;
+    line-height: 95%;
     font-family: var(--font-sans-serif) !important;
     font-size: var(--h3-size);
     text-transform: uppercase;
-    font-weight: 700 !important;
+    font-weight: 300 !important;
     margin: 0.8em 0 0.2em 0;
     padding-bottom: 5px;
 }
@@ -262,9 +267,10 @@ strong {
 .cm-header-4 {
     font-family: var(--font-sans-serif) !important;
     font-size: var(--h4-size);
-    font-weight: 500 !important;
+    font-weight: 300 !important;
     margin: 0.8em 0 0.2em 0;
     text-transform: uppercase;
+    line-height: 95%;
 }
 
 .markdown-preview-section h5,
@@ -272,8 +278,9 @@ strong {
 .cm-header-5 {
     font-family: var(--font-sans-serif) !important;
     font-size: var(--h5-size);
-    font-weight: 500 !important;
+    font-weight: 300 !important;
     margin: 0.8em 0 0.2em 0;
+    line-height: 95%;
 }
 
 .markdown-preview-section h6,
@@ -284,6 +291,7 @@ strong {
     color: var(--text-title-h6);
     font-weight: 700 !important;
     margin: 0.8em 0 0.2em 0;
+    line-height: 95%;
 }
 
 /* 4.2 Links */
@@ -678,12 +686,17 @@ ol li:before {
 /* ----------------- 9. Application Chrome ----------------- */
 
 .workspace-ribbon,
+.workspace-tab-container-after.is-after-active .workspace-tab-header-inner,
+.workspace-tab-container-before.is-before-active .workspace-tab-header-inner,
+.workspace-tab-container-inner,
 .workspace-tab-header-container,
 .workspace-tab-header-inner,
-.workspace-tab-headerr,
-.workspace-tab-container-inner {
+.workspace-tab-header.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header.is-after-active,
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-before-active,
+.workspace-tab-headerr {
     background-color: var(--text-normal);
-    color: var(--background-primary);
 }
 
 .is-active .workspace-tab-header-container,
@@ -725,8 +738,18 @@ ol li:before {
     font-size: var(--h6-size);
 }
 
+/* ----------------- 9. Media Queries ----------------- */
+@media screen and (min-width: 1000px) {
+    .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+        max-width: 900px;
+    }
 
-/* ----------------- 9. Miscellaneous ----------------- */
+    .markdown-source-view.is-readable-line-width .CodeMirror {
+        max-width: 900px;
+    }
+}
+
+/* ----------------- 10. Miscellaneous ----------------- */
 /* Horizontal rule */
 .markdown-preview-view hr {
     padding: 0;
@@ -755,5 +778,5 @@ img {
 /* Active edit line selection */
 .cm-active {
     background-color: var(--acrtive-line);
-    /* color: var(--background-primary); */
 }
+

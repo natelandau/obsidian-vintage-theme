@@ -4,7 +4,6 @@ A mixture of serif and sans-serif fonts with a focus on readability and a vintag
 
 - Dark and light mode support
 - Support for editing preview mode
-- Only the editing and preview window are changed. Application chrome is untouched by these styles.
 - Preview mode uses serif typography
 - Live preview edit mode uses monospace font and active line highlighting
 - Tweaks for Dataview plugin styles
