@@ -723,6 +723,17 @@ ol li:before {
     background-color: var(--background-primary-alt);
 }
 
+.workspace-ribbon-collapse-btn {
+    color: var(--background-primary);
+}
+
+.is-collapsed .workspace-ribbon-collapse-btn,
+.is-collapsed .side-dock-ribbon-tab,
+.is-collapsed .side-dock-ribbon-action,
+.is-collapsed .workspace-tab-header-inner-icon {
+    color: var(--text-normal);
+}
+
 .workspace-leaf-resize-handle {
     border-right: 3px double var(--text-normal);
 }
@@ -779,4 +790,3 @@ img {
 .cm-active {
     background-color: var(--acrtive-line);
 }
-
