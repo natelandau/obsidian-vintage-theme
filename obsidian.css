@@ -711,6 +711,11 @@ ol li:before {
     color: var(--background-primary);
 }
 
+/* fix sidebar icons in app */
+.is-mobile .side-dock-ribbon-action {
+    color: var(--text-normal);
+}
+
 .workspace-tab-header-inner-icon:hover {
     color: var(--background-secondary-alt);
 }
