@@ -1,12 +1,12 @@
 # Vintage theme for Obsidian.md
 
-A mixture of serif and sans-serif fonts with a focus on readability and a vintage aesthetic. Features
+A mixture of serif and sans-serif fonts with a focus on readability and a vintage aesthetic.
 
 - Dark and light mode support
 - Support for editing preview mode
 - Preview mode uses serif typography
 - Live preview edit mode uses monospace font and active line highlighting
-- Tweaks for Dataview plugin styles
+- Tweaks for Dataview plugin styles to match theme
 - Uses [Google fonts](https://fonts.google.com)
 
 ## Screenshots
@@ -26,8 +26,6 @@ A mixture of serif and sans-serif fonts with a focus on readability and a vintag
 | Lists       | ![Lists](_media/lists_light.png)           | ![Lists](_media/lists_dark.png)           |
 | Code        | ![Code](_media/code_light.png)             | ![Code](_media/code_dark.png)             |
 | Edit Mode   | ![Edit Mode](_media/editmode_light.png)    | ![Edit Mode](_media/editmode_dark.png)    |
-
-## Fancy List Numbering
 
 ## How to Install
 
