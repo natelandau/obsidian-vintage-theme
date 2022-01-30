@@ -766,6 +766,10 @@ pre.dataview-error {
     font-size: var(--h6-size);
 }
 
+.titlebar-inner {
+    color: var(--light0) !important;
+}
+
 /* ----------------- 9. Media Queries ----------------- */
 @media screen and (min-width: 1000px) {
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
