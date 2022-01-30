@@ -623,7 +623,7 @@ ol li:before {
 .markdown-preview-view table td {
     vertical-align: top;
     border: none !important;
-    border-top: 1px solid var(--text-normal) !important;
+    border-top: 1px dashed var(--text-faint) !important;
 }
 
 /* ----------------- 8. Frontmatter ----------------- */
@@ -679,6 +679,16 @@ ol li:before {
     margin: 0;
 }
 
+pre.dataview-error {
+    border: 0 !important;
+    font-family: var(--font-serif) !important;
+    margin-top: -2em !important;
+    background-color: var(--background-primary) !important;
+    box-shadow: none !important;
+    font-size: var(--default-font-size) !important;
+    line-height: var(--default-line-height) !important;
+    color: var(--text-muted) !important;
+}
 
 /* Other dataview styles are mixed in with links and headings.  Search for these classes:
     - .dataview a:hover,
