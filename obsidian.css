@@ -807,3 +807,11 @@ img {
 .cm-active {
     background-color: var(--acrtive-line);
 }
+
+.graph-view.color-line {
+    color: var(--text-normal);
+}
+
+.graph-view.color-line-highlight {
+    color: var(--text-normal);
+}
