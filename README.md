@@ -6,7 +6,7 @@ A mixture of serif and sans-serif fonts with a focus on readability and a vintag
 - Support for editing preview mode
 - Preview mode uses serif typography
 - Live preview edit mode uses monospace font and active line highlighting
-- Tweaks for Dataview plugin styles to match theme
+- Plugin tweaks to match theme for Tasks and Dataview plugins
 - Uses [Google fonts](https://fonts.google.com)
 
 ## Screenshots

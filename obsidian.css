@@ -5,7 +5,7 @@ File Organization
 
 1. Variables
 2. Light/Dark Base Styles
-3. Page and Application
+3. Page Container
 4. Typography
     4.1 Typography: Headings
     4.2 Typography: Links
@@ -15,7 +15,9 @@ File Organization
     4.6 Typography: Blockquotes
 5. Tables
 6. Frontmatter
-7. Dataview Plugin
+7. Plugins
+    7.1 Dataview
+    7.2 Tasks
 8. Application Chrome
 9. Media Queries
 10. Miscellaneous
@@ -300,6 +302,7 @@ strong {
 .markdown-preview-section a:visited,
 .cm-hmd-internal-link,
 .dataview a,
+.plugin-tasks-query-result a,
 .block-language-dataview a,
 .cm-link {
     color: var(--text-a) !important;
@@ -316,6 +319,7 @@ strong {
 
 .markdown-preview-section a:hover,
 .dataview a:hover,
+.plugin-tasks-query-result a:hover,
 .block-language-dataview a:hover {
     outline: 0 none;
     color: var(--text-a-hover) !important;
@@ -324,6 +328,7 @@ strong {
 }
 
 .markdown-preview-section a:active,
+.plugin-tasks-query-result a:active,
 .dataview a:active {
     color: var(--text-normal) !important;
 }
@@ -580,7 +585,7 @@ ol li:before {
     z-index: 1;
 }
 
-/* ----------------- 4. Tables ----------------- */
+/* ----------------- 5. Tables ----------------- */
 .markdown-preview-view tbody {
     display: table-row-group;
 }
@@ -627,7 +632,7 @@ ol li:before {
     border-top: 1px dashed var(--text-faint) !important;
 }
 
-/* ----------------- 8. Frontmatter ----------------- */
+/* ----------------- 6. Frontmatter ----------------- */
 .markdown-preview-view pre.frontmatter {
     display: none;
 }
@@ -662,7 +667,9 @@ ol li:before {
     color: var(--text-faint) !important;
 }
 
-/* ----------------- 8. Dataview Plugin ----------------- */
+/* ----------------- 7. Plugins ----------------- */
+
+/* 7.1 Dataview Plugin */
 .dataview.list-view-ul {
     font-family: var(--font-serif);
     font-size: var(--default-font-size);
@@ -695,6 +702,14 @@ ol li:before {
     - .dataview a:hover,
     - .block-language-dataview
 /*
+
+/* 7.2 Tasks Plugin
+    note: base link styles added to section 4. Typography */
+.plugin-tasks-query-result .tasks-backlink {
+    font-family: var(--font-sans-serif);
+    font-size: var(--small-font-size);
+}
+
 
 /* ----------------- 9. Application Chrome ----------------- */
 
