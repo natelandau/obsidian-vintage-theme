@@ -228,8 +228,8 @@ strong {
     line-height: 95% !important;
     margin: 0.8em 0 0.2em 0;
     padding-bottom: 5px;
-    text-decoration-style: double;
-    text-decoration-thickness: 1px;
+    text-decoration-style: double !important;
+    text-decoration-thickness: 1px !important;
     text-decoration: underline;
     text-transform: uppercase;
 }
