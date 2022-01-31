@@ -178,9 +178,9 @@ strong {
 .CodeMirror-cursor,
 .cm-s-obsidian .cm-cursor,
 .cm-s-obsidian .cm-dropCursor {
-    border-left-width: 0.3em !important;
     background-color: var(--vim-cursor) !important;
     border-color: var(--vim-cursor) !important;
+    border-left-width: 0.3em !important;
     opacity: 70% !important;
 }
 
@@ -195,8 +195,8 @@ strong {
 .dataview {
     font-family: var(--font-serif);
     font-size: var(--default-font-size);
-    line-height: var(--default-line-height);
     font-weight: 400;
+    line-height: var(--default-line-height);
 }
 
 .markdown-preview-section p {
@@ -204,18 +204,19 @@ strong {
 }
 
 .cm-line {
-    margin: 0 0 1em 0 !important;
     font-family: var(--font-monospace);
     font-size: var(--default-font-size);
-    line-height: var(--default-line-height);
     font-weight: 400;
+    line-height: var(--default-line-height);
+    margin: 0 0 1em 0 !important;
 }
 
 /* 4.1 Headings */
 .HyperMD-header {
-    margin-top: 1em !important;
     line-height: 95%;
+    margin-top: 1em !important;
     padding-bottom: 0;
+    padding-top: 1em !important;
 }
 
 .markdown-preview-section h1,
@@ -223,14 +224,14 @@ strong {
 .cm-header-1 {
     font-family: var(--font-sans-serif) !important;
     font-size: var(--h1-size);
-    line-height: 95%;
-    text-transform: uppercase;
     font-weight: 700 !important;
+    line-height: 95% !important;
     margin: 0.8em 0 0.2em 0;
     padding-bottom: 5px;
-    text-decoration: underline;
     text-decoration-style: double;
     text-decoration-thickness: 1px;
+    text-decoration: underline;
+    text-transform: uppercase;
 }
 
 .markdown-preview-section h2,
@@ -238,11 +239,11 @@ strong {
 .cm-header-2 {
     font-family: var(--font-sans-serif) !important;
     font-size: var(--h2-size);
-    line-height: 95%;
-    text-transform: uppercase;
     font-weight: 300 !important;
+    line-height: 95% !important;
     margin: 0.8em 0 0.2em 0 !important;
     padding-bottom: 5px;
+    text-transform: uppercase;
 }
 
 .markdown-preview-section h2,
@@ -253,13 +254,13 @@ strong {
 .markdown-preview-section h3,
 .HyperMD-header-3,
 .cm-header-3 {
-    line-height: 95%;
     font-family: var(--font-sans-serif) !important;
     font-size: var(--h3-size);
-    text-transform: uppercase;
     font-weight: 300 !important;
+    line-height: 95% !important;
     margin: 0.8em 0 0.2em 0;
     padding-bottom: 5px;
+    text-transform: uppercase;
 }
 
 .markdown-preview-section h4,
@@ -268,9 +269,9 @@ strong {
     font-family: var(--font-sans-serif) !important;
     font-size: var(--h4-size);
     font-weight: 300 !important;
+    line-height: 95% !important;
     margin: 0.8em 0 0.2em 0;
-    text-transform: uppercase;
-    line-height: 95%;
+    text-transform: capitalize;
 }
 
 .markdown-preview-section h5,
@@ -279,19 +280,19 @@ strong {
     font-family: var(--font-sans-serif) !important;
     font-size: var(--h5-size);
     font-weight: 300 !important;
+    line-height: 95% !important;
     margin: 0.8em 0 0.2em 0;
-    line-height: 95%;
 }
 
 .markdown-preview-section h6,
 .HyperMD-header-6,
 .cm-header-6 {
-    font-family: var(--font-serif) !important;
-    font-size: var(--h5-size);
     color: var(--text-title-h6);
+    font-family: var(--font-serif) !important;
+    font-size: var(--h6-size);
     font-weight: 700 !important;
+    line-height: 95% !important;
     margin: 0.8em 0 0.2em 0;
-    line-height: 95%;
 }
 
 /* 4.2 Links */
