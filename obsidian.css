@@ -680,7 +680,7 @@ ol li:before {
     margin: 0;
 }
 
-pre.dataview-error {
+.markdown-preview-view pre.dataview-error {
     border: 0 !important;
     font-family: var(--font-serif) !important;
     margin-top: -2em !important;
