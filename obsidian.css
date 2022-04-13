@@ -58,7 +58,7 @@ File Organization
     --blue2: #88C0D0;
 
     --default-font-size: 20px;
-    --default-line-height: 30px;
+    --default-line-height: 34px;
     --small-font-size: 16px;
     --small-line-height: 24px;
     --editor-font-size-override: 18px !important;
@@ -304,6 +304,7 @@ strong {
 .dataview a,
 .plugin-tasks-query-result a,
 .block-language-dataview a,
+td a,
 .cm-link {
     color: var(--text-a) !important;
     cursor: pointer;
@@ -314,11 +315,13 @@ strong {
 }
 
 .markdown-preview-view .internal-link.is-unresolved {
-    opacity: 0.7;
+    opacity: 0.8;
+    text-decoration: underline wavy 1px var(--text-a) !important;
 }
 
 .markdown-preview-section a:hover,
 .dataview a:hover,
+td a:hover,
 .plugin-tasks-query-result a:hover,
 .block-language-dataview a:hover {
     outline: 0 none;
@@ -329,6 +332,7 @@ strong {
 
 .markdown-preview-section a:active,
 .plugin-tasks-query-result a:active,
+td a:active,
 .dataview a:active {
     color: var(--text-normal) !important;
 }
@@ -349,7 +353,7 @@ strong {
     background-color: var(--text-normal);
     color: var(--background-primary) !important;
     padding: 6px 12px;
-    border-top: 1px solid var(--gray_);
+    border-top: 1px solid var(--gray);
     border-right: 1px solid var(--color-dark);
     border-bottom: 1px solid var(--color-dark);
     border-left: 1px solid var(--gray);
@@ -660,7 +664,7 @@ ol li:before {
 
 .cm-hmd-frontmatter.cm-atom {
     font-weight: 900 !important;
-    color: var(--yellow) !important;
+    color: var(--text-faint) !important;
 }
 
 .cm-comment.cm-hmd-frontmatter {
